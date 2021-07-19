@@ -3,7 +3,7 @@ import os
 from shutil import copyfile
 
 in_folder = ""
-out_folder = "
+out_folder = ""
 
 
 for i in os.listdir(in_folder):
@@ -21,6 +21,7 @@ for i in os.listdir(in_folder):
             text = text.replace('?', '')
             text = text.replace('-', '')
             text = text.replace('!', '')
+            text = text.replace('*', '')
             copyfile(in_folder + i, out_folder + text + '.wav')
 
         except sr.UnknownValueError:
